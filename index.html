@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c1955e4074.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main>
+        <section id="index">
+            <h1>Hey! Je suis Florian COEUR</h1>
+            <div class="grid-container">
+                <!-- Les 4 boîtes dans la grille -->
+                <div id="comp" class="box floating">
+                    <a href="skills.html"><table>
+                        <thead>
+                            <th><i class="fa-solid fa-chevron-down"></i></th>
+                            <th><i class="fa-solid fa-gear"></i></th>
+                            <th colspan="2">competences</th>
+                        </thead>
+                        <tr>
+                            <td><i class="fa-solid fa-key"></i></td>
+                            <td colspan="2">id_comp:</td>
+                            <td>int</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-regular fa-file-lines"></i></td>
+                            <td colspan="2">type_comp: </td>
+                            <td> varchar(50)</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-regular fa-file-lines"></i></td>
+                            <td colspan="2">nom_comp:</td>
+                            <td>varchar(50)</td>
+                        </tr>
+                    </table></a>
+                </div>
+                <div id="posseder" class="box">
+                    <table>
+                        <thead>
+                            <th><i class="fa-solid fa-chevron-down"></i></th>
+                            <th><i class="fa-solid fa-gear"></i></th>
+                            <th colspan="2">posseder</th>
+                        </thead>
+                        <tr>
+                            <td><i class="fa-solid fa-key"></i></td>
+                            <td colspan="2">id_dev_web:</td>
+                            <td>int</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-key"></i></td>
+                            <td colspan="2">id_comp:</td>
+                            <td>int</td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="projet" class="box floating">
+                    <a href="projects.html">
+                        <table>
+                            <thead>
+                                <th><i class="fa-solid fa-chevron-down"></i></th>
+                                <th><i class="fa-solid fa-gear"></i></th>
+                                <th colspan="2">projet</th>
+                            </thead>
+                            <tr>
+                                <td><i class="fa-solid fa-key"></i></td>
+                                <td colspan="2">id_projet:</td>
+                                <td>int</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">nom_projet: </td>
+                                <td> varchar(50)</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-hashtag"></i></td>
+                                <td colspan="2">id_dev_web:</td>
+                                <td>int</td>
+                            </tr>
+                        </table>
+                    </a>
+                </div>
+                <div id="dev_web" class="box floating">
+                    <a href="about.html">
+                        <table>
+                            <thead>
+                                <th><i class="fa-solid fa-chevron-down"></i></th>
+                                <th><i class="fa-solid fa-gear"></i></th>
+                                <th colspan="2">dev_web</th>
+                            </thead>
+                            <tr>
+                                <td><i class="fa-solid fa-key"></i></td>
+                                <td colspan="2">id_dev_web:</td>
+                                <td>int</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">prenom_dev: </td>
+                                <td> varchar(50)</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">nom_dev:</td>
+                                <td>varchar(50)</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">photo_dev:</td>
+                                <td>varchar(50)</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">bio_dev:</td>
+                                <td>text</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">email_dev:</td>
+                                <td>varchar(50)</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">github_dev:</td>
+                                <td>varchar(50)</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">linkedin_dev:</td>
+                                <td>varchar(50)</td>
+                            </tr>
+                        </table>
+                    </a>
+                </div>
+                <div id="study" class="box floating">
+                    <a href="formation.html">
+                        <table>
+                            <thead>
+                                <th><i class="fa-solid fa-chevron-down"></i></th>
+                                <th><i class="fa-solid fa-gear"></i></th>
+                                <th colspan="2">formation</th>
+                            </thead>
+                            <tr>
+                                <td><i class="fa-solid fa-key"></i></td>
+                                <td colspan="2">id_form:</td>
+                                <td>int</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">nom_form: </td>
+                                <td> varchar(50)</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">annee_form:</td>
+                                <td>int</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">ecole_form:</td>
+                                <td>varchar(50)</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">nlieu_form:</td>
+                                <td>varchar(50)</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">logo_ecole:</td>
+                                <td>varchar(50)</td>
+                            </tr>
+                        </table>
+                    </a>
+                </div>
+                <div id="obtenir" class="box">
+                    <table>
+                        <thead>
+                            <th><i class="fa-solid fa-chevron-down"></i></th>
+                            <th><i class="fa-solid fa-gear"></i></th>
+                            <th colspan="2">obtenir</th>
+                        </thead>
+                        <tr>
+                            <td><i class="fa-solid fa-key"></i></td>
+                            <td colspan="2">id_formation:</td>
+                            <td>int</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fa-solid fa-key"></i></td>
+                            <td colspan="2">id_dev_web:</td>
+                            <td>int</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="console">
+                <span>portflolio></span> help;<br>
+                Si vous souhaitez accéder aux différentes parties du portfolio, veuillez cliquer sur la table Mysql flotante.<br>
+                <span>dev_web</span> : Pour en savoir plus sur moi;<br>
+                <span>formation</span> : Pour connaître mon parcours;<br>
+                <span>compétences</span> : Ce que je sais faire;<br>
+                <span>projet</span> : Voir mes réalisations.<br>
+                <span>portfolio></span>
+            </div>
+        </section>
+    </main>
+      
+    <!-- SVG pour les lignes -->
+    <svg id="lines" width="100%" height="100%" style="position: absolute; top: 0; left: 0; z-index: -1;"></svg>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
