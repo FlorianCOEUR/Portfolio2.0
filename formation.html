@@ -10,40 +10,19 @@
 </head>
 <body>
     <header id="header-placeholder"></header>
-    <div id="content">
-
+    <main>
         <section id="formations">
-            <div class="container fade-in box">                      
-                <div class="row text-center justify-content-center mb-5">
-                    <div class="col-xl-6 col-lg-8">
-                        <h2 class="font-weight-bold">A Company Evolution</h2>
-                        <p >We’re very proud of the path we’ve taken. Explore the history that made us the company we are today.</p>
-                    </div>
-                </div>
-            
-                <div class="row">
-                    <div class="col">
-                        <div class="timeline-steps aos-init aos-animate" data-aos="fade-up">
-                            <div class="timeline-step">
-                                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2003">
-                                    <div class="inner-circle"></div>
-                                    <p class="h6 mt-3 mb-1">2003</p>
-                                    <p class="h6 mb-0 mb-lg-0">lore</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="timeline-content" data-toggle="popover" data-trigger="hover" data-placement="top" title="" data-content="And here's some amazing content. It's very engaging. Right?" data-original-title="2004">
-                                    <div class="inner-circle"></div>
-                                    <p class="h6 mt-3 mb-1">2004</p>
-                                    <p class="h6 mb-0 mb-lg-0">Launched Trello</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="console">
+                <span>portfolio></span><pre>
+        SELECT * FROM formation f
+        JOIN obtenir o ON o.id_formation=f.id_formation
+        JOIN dev_web dw ON dw.id_dev_web=o.devweb
+        WHERE prenom_dev='Florian'
+        AND nom_dev='Coeur';</pre>
+                 <span>portfolio></span>
             </div>
         </section>
-    </div>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
