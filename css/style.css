@@ -1,0 +1,331 @@
+:root{
+  --primary-bg-color:rgb(17, 26, 39);
+  --secondary-bg-color: rgb(17, 40, 64);
+  --primary-txt-color:rgb(194, 243, 255);
+  --button-color:rgb(117, 199, 240);
+  --gay-pride-coolor:rgb(209, 64, 129);
+}
+
+
+body{
+    background-color: var(--primary-bg-color);
+}
+  /*Style du header*/
+header nav, header .offcanvas{
+  background-color: var(--secondary-bg-color);
+}
+header ul li .nav-link, header .navbar-brand{
+  color:rgb(182, 223, 252);
+}
+header ul li .nav-link{
+  border: 1px solid #b6dffc;
+  border-radius: 10px;
+  transition: all 1s ease-out
+}
+header ul li .nav-link:hover{
+  color: #1E1E1E;
+  background-color: rgb(182, 223, 252);
+}
+.offcanvas ul{
+  width: fit-content;
+}
+/*Style du main*/
+main{
+  color:var(--primary-txt-color);
+  border: 1px solid var(--gay-pride-coolor);
+  margin-top: 60px;
+}
+h1{
+  color: var(--button-color);
+}
+h2{
+  text-align: center;
+}
+h2,h1,h3{
+  margin: 15px 0px;
+}
+a{
+  color:var(--primary-txt-color);
+  text-decoration: none;
+}
+hr{
+  color: var(--gay-pride-coolor);
+  opacity: 1;
+}
+
+main section{
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: var(--secondary-bg-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+.console{
+  background-color: #1E1E1E;
+  color: #cbcbcb;
+  font-family: 'Courier New', Courier, monospace; /* Police monospace */
+  margin: 20px 0px;
+  border: 1px solid #AAAAAA; /* Bordure grise */
+  border-radius: 5px; /* Coins arrondis */
+  overflow: auto; /* Permettre le défilement si le contenu dépasse */
+}
+.console span{
+    font-weight: bolder;
+    color: white;
+}
+.console span:last-child::after { 
+    content: "_";
+    animation: blink 1s infinite;
+}
+  /* style de l'index */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: space-around;
+  align-content: center;
+  box-shadow: 0px 0px 10px black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px 0px;
+  grid-gap:10px;
+}
+.box {
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    border: 1px black solid;
+    z-index: 1;
+}
+.box a, .box{
+    color: black;
+    text-decoration: none;
+}
+#index th:nth-child(2){
+    width: 2px;
+}
+#index tr:nth-child(2n){
+background: #b6dffc;
+}
+.floating{
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+}
+.floating:hover{
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: float 3s ease-in-out infinite;
+    img { width: 100%; height: auto; }
+}
+/*Style du Apropos*/
+
+main #about .content{
+    display: grid;
+    justify-items: center;
+}
+main #about .content>div:first-child{
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, auto);
+    background-color: #b6dffc;
+    justify-items: center;
+    padding: 5px 5px;
+}
+#about .content div img{
+    width: 300px;
+    grid-column: 1/span 2;
+    padding-bottom: 5px;
+}
+
+.single-profile a{
+    color: #1E1E1E;
+    text-decoration: none;
+    padding: 10px 0;
+}
+
+.single-profile-overlay a{
+    color: #b6dffc;
+}
+main #about .content td{
+    padding: 10px 0;
+    width: 300px;
+}
+
+.profile-txt {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.single-profile {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden; 
+    transition:background 0.5s linear;
+}
+.single-profile-overlay{
+    display:flex;
+    align-items:center;
+    text-transform: capitalize;
+    justify-content:center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: " ";
+    width:100%;
+    height: 100%;
+    background: #1E1E1E;
+    transform:scale(0);
+    transition: .5s;
+}
+.single-profile:hover .single-profile-overlay{
+    transform:scale(1);
+    top:0;
+}
+main #about .content td span{
+    font-weight: bold;
+    text-decoration: underline var(--gay-pride-coolor);
+}
+main #about hr{
+    padding: 20px 0;
+}
+main #about .bio{
+    padding-left: 10px;
+    margin: 0px 20px;
+}
+
+/* Style de la page de formation */
+.time-line{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-template-rows: repeat(4, auto);
+}
+.time{
+  display: flex;
+  justify-content: center;
+}
+
+.time span{
+  height: 100%;
+  width: 1px;
+  background-color: var(--primary-txt-color);
+}
+.time i{
+  color: var(--gay-pride-coolor);
+  position:absolute;
+}
+
+#formations img{
+  width: 150px;
+}
+
+#index, #about, #formations, #skills, #projets{
+  scroll-margin: 50px;
+}
+/*Style des compétences*/
+#skills i{
+  color:var(--gay-pride-coolor)
+}
+.border-bp{
+  border-bottom: 1px solid var(--gay-pride-coolor);
+}
+
+/*Style des projets*/
+.card{
+  background-color: var(--secondary-bg-color);
+  border-radius: 5px;
+  border: 1px solid var(--gay-pride-coolor);
+}
+.card img{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+@keyframes blink {
+    0%{		color: #cbcbcb;	}
+    50%{	color: transparent;	}
+}
+@media (max-width:512px){ 
+    thead{
+        padding: 5px;
+    }
+}@media (max-width:768px){ 
+    main #about .content{
+        grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:992px){
+  #annee2{
+    grid-column: 2/span 1;
+    grid-row: 3/span 1;
+  }
+  
+  .time-line #ligne1{
+    grid-column: 1/span 1;
+    grid-row: 1/span 2;
+  }
+  .time-line #ligne2{
+    grid-row: 3/ span 2;
+  }
+}
+
+
+
+@media (min-width:992px){
+    main #about .content{
+        grid-template-columns: auto 1fr;
+    }
+    .grid-container{
+        grid-template-columns: repeat(3,auto);
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 50px;
+    }
+    .grid-container #dev_web{
+        grid-row: 1/span 3;
+        grid-column: 2/span 1;
+    }
+    .grid-container #study{
+        grid-column: 3/span 1;
+        grid-row: 3/span 1;
+    }
+    .time-line{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 30px auto;
+    }
+    .time{
+      display: flex;
+      align-items: center;
+    }
+    .time span{
+      height: 1px;
+      width: 100%;
+      background-color: var(--primary-txt-color);
+    }
+    .time-line i{
+      position: relative;
+    }
+    .border-bp{
+      border-right: 1px solid var(--gay-pride-coolor);
+      border-bottom: none;
+    }
+}
+
+@keyframes float {
+0% {
+    box-shadow: 0 5px 15px 0px rgba(182, 223, 252,0.6);
+    transform: translatey(0px);
+}
+50% {
+    box-shadow: 0 25px 15px 0px rgba(182, 223, 252,0.2);
+    transform: translatey(-5px);
+}
+100% {
+    box-shadow: 0 5px 15px 0px rgba(182, 223, 252,0.6);
+    transform: translatey(0px);
+}
+}

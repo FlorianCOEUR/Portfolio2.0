@@ -1,22 +1,3 @@
-function loadHeader() {
-  fetch('header.html') // Charge le fichier header.html
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Erreur lors du chargement du header : ' + response.status);
-          }
-          return response.text(); // Convertit la réponse en texte
-      })
-      .then(html => {
-          document.getElementById('header-placeholder').innerHTML = html; // Insère le HTML dans la page
-      })
-      .catch(error => {
-          console.error('Erreur :', error);
-      });
-}
-
-// Appelle la fonction pour charger le header
-loadHeader();
-
 
 
 function connectBoxes() {
