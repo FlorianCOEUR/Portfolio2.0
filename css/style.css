@@ -249,6 +249,13 @@ main #about .bio{
     thead{
         padding: 5px;
     }
+}
+
+@media (max-width:768px){ 
+    main #about .content{
+        grid-template-rows: repeat(2, 1fr);
+    }
+    
     .grid-container{
       font-size: 0.9em;
       grid-template-columns: 1fr;
@@ -267,12 +274,6 @@ main #about .bio{
     }
     #obtenir{
       grid-row: 5/span 1;
-    }
-}
-
-@media (max-width:768px){ 
-    main #about .content{
-        grid-template-rows: repeat(2, 1fr);
     }
 }
 
