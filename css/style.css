@@ -67,7 +67,9 @@ main section{
   margin: 20px 0px;
   border: 1px solid #AAAAAA; /* Bordure grise */
   border-radius: 5px; /* Coins arrondis */
-  overflow: auto; /* Permettre le défilement si le contenu dépasse */
+}
+.console pre{
+  text-wrap: wrap;
 }
 .console span{
     font-weight: bolder;
@@ -78,8 +80,19 @@ main section{
     animation: blink 1s infinite;
 }
   /* style de l'index */
-
+svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
 .grid-container {
+  width: 100%;
+  height: auto;
+}
+.grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -186,12 +199,18 @@ main #about .content td{
     transform:scale(1);
     top:0;
 }
-main #about .content td span{
+#about .content .bio>div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bio>div>p{
+  width: 50%;
+}
+.bio>div>p>span{
     font-weight: bold;
     text-decoration: underline var(--gay-pride-coolor);
-}
-main #about hr{
-    padding: 20px 0;
 }
 main #about .bio{
     padding-left: 10px;
@@ -245,18 +264,13 @@ main #about .bio{
   border-top-right-radius: 5px;
 }
 
-@media (max-width:512px){ 
-    thead{
-        padding: 5px;
-    }
-}
 
 @media (max-width:768px){ 
     main #about .content{
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
     }
     
-    .grid-container{
+    .grid{
       font-size: 0.9em;
       grid-template-columns: 1fr;
       grid-template-rows: repeat(6, auto);
@@ -298,16 +312,16 @@ main #about .bio{
     main #about .content{
         grid-template-columns: auto 1fr;
     }
-    .grid-container{
+    .grid{
         grid-template-columns: repeat(3,auto);
         grid-template-rows: repeat(3, auto);
         grid-gap: 50px;
     }
-    .grid-container #dev_web{
+    .grid #dev_web{
         grid-row: 1/span 3;
         grid-column: 2/span 1;
     }
-    .grid-container #study{
+    .grid #study{
         grid-column: 3/span 1;
         grid-row: 3/span 1;
     }
