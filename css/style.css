@@ -67,7 +67,9 @@ main section{
   margin: 20px 0px;
   border: 1px solid #AAAAAA; /* Bordure grise */
   border-radius: 5px; /* Coins arrondis */
-  overflow: auto; /* Permettre le défilement si le contenu dépasse */
+}
+.console pre{
+  text-wrap: wrap;
 }
 .console span{
     font-weight: bolder;
@@ -186,12 +188,18 @@ main #about .content td{
     transform:scale(1);
     top:0;
 }
-main #about .content td span{
+#about .content .bio>div{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bio>div>p{
+  width: 50%;
+}
+.bio>div>p>span{
     font-weight: bold;
     text-decoration: underline var(--gay-pride-coolor);
-}
-main #about hr{
-    padding: 20px 0;
 }
 main #about .bio{
     padding-left: 10px;
@@ -245,15 +253,10 @@ main #about .bio{
   border-top-right-radius: 5px;
 }
 
-@media (max-width:512px){ 
-    thead{
-        padding: 5px;
-    }
-}
 
 @media (max-width:768px){ 
     main #about .content{
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
     }
     
     .grid-container{

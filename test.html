@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid avec Connexions SVG</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .grid-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+        }
+
+        .connections {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px;
+            position: relative;
+            justify-items: center;
+        }
+
+        .box, .center-box {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .center-box {
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <!-- SVG pour dessiner les lignes -->
+        <svg class="connections"></svg>
+
+        <!-- Grid avec 5 éléments + 1 élément central -->
+        <div class="grid">
+            <div class="box" id="box1">1</div>
+            <div class="box" id="box2">2</div>
+            <div class="box" id="box3">3</div>
+            <div class="box" id="box4">4</div>
+            <div class="box" id="box5">5</div>
+            <div class="center-box" id="center">C</div>
+        </div>
+    </div>
+
+    <script>
+        function connectElements(svg, elem1, elem2) {
+            let pos1 = elem1.getBoundingClientRect();
+            let pos2 = elem2.getBoundingClientRect();
+
+            let x1 = pos1.left + pos1.width / 2 + window.scrollX;
+            let y1 = pos1.top + pos1.height / 2 + window.scrollY;
+            let x2 = pos2.left + pos2.width / 2 + window.scrollX;
+            let y2 = pos2.top + pos2.height / 2 + window.scrollY;
+
+            let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("x1", x1);
+            line.setAttribute("y1", y1);
+            line.setAttribute("x2", x2);
+            line.setAttribute("y2", y2);
+            line.setAttribute("stroke", "black");
+            line.setAttribute("stroke-width", "2");
+
+            svg.appendChild(line);
+        }
+
+        function updateConnections() {
+            let svg = document.querySelector(".connections");
+            svg.innerHTML = ""; // Efface les anciennes lignes
+
+            let center = document.getElementById("center");
+            let boxes = document.querySelectorAll(".box");
+
+            boxes.forEach(box => {
+                connectElements(svg, box, center);
+            });
+        }
+
+        // Met à jour les lignes au chargement et au redimensionnement
+        window.addEventListener("load", updateConnections);
+        window.addEventListener("resize", updateConnections);
+    </script>
+
+</body>
+</html>
