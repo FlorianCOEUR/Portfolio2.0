@@ -49,82 +49,37 @@
         <section id="index">
             <h1>Hey! Je suis Florian COEUR</h1>
             <div class="grid-container">
-                <div id="comp" class="box floating">
-                    <a href="#skills"><table>
-                        <thead>
-                            <th><i class="fa-solid fa-chevron-down"></i></th>
-                            <th><i class="fa-solid fa-gear"></i></th>
-                            <th colspan="2">competences</th>
-                        </thead>
-                        <tr>
-                            <td><i class="fa-solid fa-key"></i></td>
-                            <td colspan="2">id_comp:</td>
-                            <td>int</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-regular fa-file-lines"></i></td>
-                            <td colspan="2">type_comp: </td>
-                            <td> varchar(50)</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-regular fa-file-lines"></i></td>
-                            <td colspan="2">nom_comp:</td>
-                            <td>varchar(50)</td>
-                        </tr>
-                    </table></a>
-                </div>
-                <div id="posseder" class="box">
-                    <table>
-                        <thead>
-                            <th><i class="fa-solid fa-chevron-down"></i></th>
-                            <th><i class="fa-solid fa-gear"></i></th>
-                            <th colspan="2">posseder</th>
-                        </thead>
-                        <tr>
-                            <td><i class="fa-solid fa-key"></i></td>
-                            <td colspan="2">id_dev_web:</td>
-                            <td>int</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-key"></i></td>
-                            <td colspan="2">id_comp:</td>
-                            <td>int</td>
-                        </tr>
-                    </table>
-                </div>
-                <div id="projet" class="box floating">
-                    <a href="#projets">
-                        <table>
+                <div class="grid">
+                    <div id="comp" class="box floating">
+                        <a href="#skills"><table>
                             <thead>
                                 <th><i class="fa-solid fa-chevron-down"></i></th>
                                 <th><i class="fa-solid fa-gear"></i></th>
-                                <th colspan="2">projet</th>
+                                <th colspan="2">competences</th>
                             </thead>
                             <tr>
                                 <td><i class="fa-solid fa-key"></i></td>
-                                <td colspan="2">id_projet:</td>
+                                <td colspan="2">id_comp:</td>
                                 <td>int</td>
                             </tr>
                             <tr>
                                 <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">nom_projet: </td>
+                                <td colspan="2">type_comp: </td>
                                 <td> varchar(50)</td>
                             </tr>
                             <tr>
-                                <td><i class="fa-solid fa-hashtag"></i></td>
-                                <td colspan="2">id_dev_web:</td>
-                                <td>int</td>
+                                <td><i class="fa-regular fa-file-lines"></i></td>
+                                <td colspan="2">nom_comp:</td>
+                                <td>varchar(50)</td>
                             </tr>
-                        </table>
-                    </a>
-                </div>
-                <div id="dev_web" class="box floating">
-                    <a href="#about">
+                        </table></a>
+                    </div>
+                    <div id="posseder" class="box">
                         <table>
                             <thead>
                                 <th><i class="fa-solid fa-chevron-down"></i></th>
                                 <th><i class="fa-solid fa-gear"></i></th>
-                                <th colspan="2">dev_web</th>
+                                <th colspan="2">posseder</th>
                             </thead>
                             <tr>
                                 <td><i class="fa-solid fa-key"></i></td>
@@ -132,106 +87,153 @@
                                 <td>int</td>
                             </tr>
                             <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">prenom_dev: </td>
-                                <td> varchar(50)</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">nom_dev:</td>
-                                <td>varchar(50)</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">photo_dev:</td>
-                                <td>varchar(50)</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">bio_dev:</td>
-                                <td>text</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">email_dev:</td>
-                                <td>varchar(50)</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">github_dev:</td>
-                                <td>varchar(50)</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">linkedin_dev:</td>
-                                <td>varchar(50)</td>
+                                <td><i class="fa-solid fa-key"></i></td>
+                                <td colspan="2">id_comp:</td>
+                                <td>int</td>
                             </tr>
                         </table>
-                    </a>
-                </div>
-                <div id="study" class="box floating">
-                    <a href="#formations">
+                    </div>
+                    <div id="projet" class="box floating">
+                        <a href="#projets">
+                            <table>
+                                <thead>
+                                    <th><i class="fa-solid fa-chevron-down"></i></th>
+                                    <th><i class="fa-solid fa-gear"></i></th>
+                                    <th colspan="2">projet</th>
+                                </thead>
+                                <tr>
+                                    <td><i class="fa-solid fa-key"></i></td>
+                                    <td colspan="2">id_projet:</td>
+                                    <td>int</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">nom_projet: </td>
+                                    <td> varchar(50)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-solid fa-hashtag"></i></td>
+                                    <td colspan="2">id_dev_web:</td>
+                                    <td>int</td>
+                                </tr>
+                            </table>
+                        </a>
+                    </div>
+                    <div id="dev_web" class="box floating">
+                        <a href="#about">
+                            <table>
+                                <thead>
+                                    <th><i class="fa-solid fa-chevron-down"></i></th>
+                                    <th><i class="fa-solid fa-gear"></i></th>
+                                    <th colspan="2">dev_web</th>
+                                </thead>
+                                <tr>
+                                    <td><i class="fa-solid fa-key"></i></td>
+                                    <td colspan="2">id_dev_web:</td>
+                                    <td>int</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">prenom_dev: </td>
+                                    <td> varchar(50)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">nom_dev:</td>
+                                    <td>varchar(50)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">photo_dev:</td>
+                                    <td>varchar(50)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">bio_dev:</td>
+                                    <td>text</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">email_dev:</td>
+                                    <td>varchar(50)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">github_dev:</td>
+                                    <td>varchar(50)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">linkedin_dev:</td>
+                                    <td>varchar(50)</td>
+                                </tr>
+                            </table>
+                        </a>
+                    </div>
+                    <div id="study" class="box floating">
+                        <a href="#formations">
+                            <table>
+                                <thead>
+                                    <th><i class="fa-solid fa-chevron-down"></i></th>
+                                    <th><i class="fa-solid fa-gear"></i></th>
+                                    <th colspan="2">formation</th>
+                                </thead>
+                                <tr>
+                                    <td><i class="fa-solid fa-key"></i></td>
+                                    <td colspan="2">id_form:</td>
+                                    <td>int</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">nom_form: </td>
+                                    <td> varchar(50)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">annee_form:</td>
+                                    <td>int</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">ecole_form:</td>
+                                    <td>varchar(50)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">nlieu_form:</td>
+                                    <td>varchar(50)</td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-regular fa-file-lines"></i></td>
+                                    <td colspan="2">logo_ecole:</td>
+                                    <td>varchar(50)</td>
+                                </tr>
+                            </table>
+                        </a>
+                    </div>
+                    <div id="obtenir" class="box">
                         <table>
                             <thead>
                                 <th><i class="fa-solid fa-chevron-down"></i></th>
                                 <th><i class="fa-solid fa-gear"></i></th>
-                                <th colspan="2">formation</th>
+                                <th colspan="2">obtenir</th>
                             </thead>
                             <tr>
                                 <td><i class="fa-solid fa-key"></i></td>
-                                <td colspan="2">id_form:</td>
+                                <td colspan="2">id_formation:</td>
                                 <td>int</td>
                             </tr>
                             <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">nom_form: </td>
-                                <td> varchar(50)</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">annee_form:</td>
+                                <td><i class="fa-solid fa-key"></i></td>
+                                <td colspan="2">id_dev_web:</td>
                                 <td>int</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">ecole_form:</td>
-                                <td>varchar(50)</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">nlieu_form:</td>
-                                <td>varchar(50)</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fa-regular fa-file-lines"></i></td>
-                                <td colspan="2">logo_ecole:</td>
-                                <td>varchar(50)</td>
                             </tr>
                         </table>
-                    </a>
+                    </div>
                 </div>
-                <div id="obtenir" class="box">
-                    <table>
-                        <thead>
-                            <th><i class="fa-solid fa-chevron-down"></i></th>
-                            <th><i class="fa-solid fa-gear"></i></th>
-                            <th colspan="2">obtenir</th>
-                        </thead>
-                        <tr>
-                            <td><i class="fa-solid fa-key"></i></td>
-                            <td colspan="2">id_formation:</td>
-                            <td>int</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fa-solid fa-key"></i></td>
-                            <td colspan="2">id_dev_web:</td>
-                            <td>int</td>
-                        </tr>
-                    </table>
-                </div>
+                <svg id="lines"></svg>
             </div>
             
-            <svg id="lines" width="100%" height="100%" style="position: absolute; top: 0; left: 0;"></svg>
             <div class="console">
                 <span>portflolio></span> help;<br>
                 Si vous souhaitez accéder aux différentes parties du portfolio, veuillez cliquer sur la table Mysql flotante.<br>
@@ -283,19 +285,13 @@
                     <hr>
                     <p>Après avoir passé 15 ans dans le domaine de la gestion d'équipe, j'ai décidé de me réorienter dans un domaine qui me passionne, le développement de site internet</p>
                     <p>Rigoureux et logique, j'ai plaisir à créer des solutions digitales qui soient faciles d'accès à toutes et tous.</p>
-                    <table>
-                        <tr>
-                            <td><span>Nom</span> : Florian COEUR</td>
-                            <td><span>Age</span> : 36 ans</td>
-                        </tr>
-                        <tr>
-                            <td><span>Niveau</span> : Bac +2</td>
-                            <td><span>Tel.</span> :07.00.00.00.00</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><span>Email</span> : <a href="mailto:florian.coeur.dev@gmail.com"> florian.coeur.dev@gmail.com</a></td>
-                        </tr>
-                    </table>
+                    <div>
+                        <p><span>Nom</span> : Florian COEUR</p>
+                        <p><span>Age</span> : 36 ans</p>
+                        <p><span>Niveau</span> : Bac +2</p>
+                        <p><span>Tel.</span> :07.00.00.00.00</p>
+                        <p><span>Email</span> : <a href="mailto:florian.coeur.dev@gmail.com"> florian.coeur.dev@gmail.com</a></p>
+                    </div>
                 </div>
             </div>
         </section>
