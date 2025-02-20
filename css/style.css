@@ -248,10 +248,33 @@ main #about .bio{
 }
 /*Style des compétences*/
 #skills i{
+  padding: 0 5px;
   color:var(--gay-pride-coolor)
 }
-.border-bp{
-  border-bottom: 1px solid var(--gay-pride-coolor);
+#skills h3{
+  font-size: 1.5em;
+}
+#skills>div>div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#skills>div>div>div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 350px;
+  box-shadow: 0 0 5px var(--gay-pride-coolor);
+  /* border: 1px solid var(--gay-pride-coolor); */
+  border-radius: 5px;
+  margin: 10px;
+  background-color: var(--primary-bg-color);
+}
+#skills>div>div>div>div{
+  padding: 10px 0;
+  text-align: center;
 }
 
 /*Style des projets*/
@@ -290,6 +313,7 @@ main #about .bio{
     #obtenir{
       grid-row: 5/span 1;
     }
+   
 }
 
 @media(max-width:992px){
