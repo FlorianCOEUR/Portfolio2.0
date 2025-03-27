@@ -3,7 +3,7 @@
   --secondary-bg-color: rgb(17, 40, 64);
   --primary-txt-color:rgb(194, 243, 255);
   --button-color:rgb(117, 199, 240);
-  --gay-pride-coolor:rgb(209, 64, 129);
+  --pink-color:rgb(209, 64, 129);
 }
 
 
@@ -32,7 +32,7 @@ header ul li .nav-link:hover{
 /*Style du main*/
 main{
   color:var(--primary-txt-color);
-  border: 1px solid var(--gay-pride-coolor);
+  border: 1px solid var(--pink-color);
   margin-top: 60px;
 }
 h1{
@@ -49,7 +49,7 @@ a{
   text-decoration: none;
 }
 hr{
-  color: var(--gay-pride-coolor);
+  color: var(--pink-color);
   opacity: 1;
 }
 
@@ -211,7 +211,7 @@ main #about .content td{
 }
 .bio>div>p>span{
     font-weight: bold;
-    text-decoration: underline var(--gay-pride-coolor);
+    text-decoration: underline var(--pink-color);
 }
 main #about .bio{
     padding-left: 10px;
@@ -235,7 +235,7 @@ main #about .bio{
   background-color: var(--primary-txt-color);
 }
 .time i{
-  color: var(--gay-pride-coolor);
+  color: var(--pink-color);
   position:absolute;
 }
 
@@ -248,17 +248,17 @@ main #about .bio{
 }
 /*Style des compétences*/
 #skills i{
-  color:var(--gay-pride-coolor)
+  color:var(--pink-color)
 }
 .border-bp{
-  border-bottom: 1px solid var(--gay-pride-coolor);
+  border-bottom: 1px solid var(--pink-color);
 }
 
 /*Style des projets*/
 .card{
   background-color: var(--secondary-bg-color);
   border-radius: 5px;
-  border: 1px solid var(--gay-pride-coolor);
+  border: 1px solid var(--pink-color);
 }
 .card img{
   border-top-left-radius: 5px;
@@ -344,7 +344,7 @@ main #about .bio{
       position: relative;
     }
     .border-bp{
-      border-right: 1px solid var(--gay-pride-coolor);
+      border-right: 1px solid var(--pink-color);
       border-bottom: none;
     }
 }
